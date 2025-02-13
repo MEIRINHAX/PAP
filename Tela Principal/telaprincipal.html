@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essência Feminina</title>
+    <link rel="stylesheet" href="telaprincipal.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="nav-bar" id="navbar">
+            <a class="logo" type="button" href="telaprincipal.html">
+                <span class="essencia">Essência</span>
+                <span class="feminina">Feminina</span>
+            </a>
+            <div class="menu">
+                <a href="#">MODA</a>
+                <a href="#">BELEZA</a>
+                <a href="#">MATERNIDADE</a>
+                <a href="#">INSPIRAÇÃO E DICAS</a>
+            </div>
+            <div class="actions">
+                <div class="search">
+                    <i class="fa fa-search"></i>
+                    <input type="text" placeholder="PESQUISAR">
+                </div>
+                <div class="cta-button">
+                    <a href="../Tela Login/login-registrar.html" class="iniciarsessao">
+                        <i class="fas fa-sign-in-alt"></i> INICIAR SESSÃO
+                    </a>
+                    <a href="" class="cesto" id="cestoBtn">
+                        <i class="fas fa-shopping-basket"></i> CESTO
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="cesto-sidebar" id="cestoSidebar">
+        <div class="cesto-header">
+        <h2>Cesto</h2>
+        <!-- Secção de Favoritos (ícone de coração + texto) -->
+        <a href="principalfavoritos.html" class="favoritos-link topo-favoritos">
+            <i class="fas fa-heart"></i> Favoritos
+        </a>
+        <!-- Botão para fechar -->
+        <button id="closeCesto">&times;</button>
+        </div>
+        <div class="cesto-content">
+        <!-- Ilustração do cesto vazio -->
+        <div class="cesto-empty-image">
+            <!-- Substituir o src pela localização da tua imagem -->
+            <img src="../Imagens/cesto.png" alt="Cesto vazio">
+        </div>
+        <!-- Título "Cesto vazio" -->
+        <h3 class="cesto-empty-title">Cesto vazio</h3>
+        <!-- Mensagem -->
+        <p>O teu cesto está vazio. Descobre tudo o que temos para ti.</p>
+        </div>
+        <div class="cesto-footer">
+        <button class="descobrir-btn">DESCOBRIR</button>
+        </div>
+    </div>
+
+    <main>
+        <section class="banner">
+            <img src="banner.jpg" alt="Moda Feminina">
+            <div class="banner-text">
+                <h1>Descubra o Melhor da Moda e Beleza</h1>
+                <button onclick="explorar()">Explorar</button>
+            </div>
+        </section>
+
+        <section class="categorias">
+            <h2>Categorias em Destaque</h2>
+            <div class="grid">
+                <div class="card">
+                    <img src="../Imagens/moda.png" alt="Moda Feminina">
+                    <h3>Moda Feminina</h3>
+                </div>
+                <div class="card">
+                    <img src="../Imagens/beleza.png" alt="Beleza e Bem-Estar">
+                    <h3>Beleza e Bem-Estar</h3>
+                </div>
+                <div class="card">
+                    <img src="../Imagens/maternidade.png" alt="Maternidade">
+                    <h3>Maternidade</h3>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h1 class="logo-text">Essência Feminina</h1>
+                <p>A Essência Feminina é uma loja online que oferece uma vasta gama de produtos de moda, beleza e maternidade.</p>
+                <div class="contact">
+                    <span><i class="fas fa-phone"></i> +351 123 456 789</span>
+                    <span><i class="fas fa-envelope"></i> info@essenciafeminina.com</span>
+                </div>
+                <div class="socials">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section links">
+                <h2>Links Rápidos</h2>
+                <ul>
+                    <li><a href="">Moda</a></li>
+                    <li><a href="#">Beleza</a></li>
+                    <li><a href="#">Maternidade</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact-form">
+                <h2>Contacte-nos</h2>
+                <form action="index.html" method="post">
+                    <input type="email" name="email" class="text-input contact-input" placeholder="O seu email...">
+                    <textarea name="message" class="text-input contact-input" placeholder="A sua mensagem..."></textarea>
+                    <button type="submit" class="btn btn-big contact-btn">
+                        <i class="fas fa-envelope"></i> Enviar
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-links">
+            <a href="#">Termos e condições de compra</a> •
+            <a href="#">Termos e condições de #essênciafeminina</a> •
+            <a href="#">Política de privacidade</a> •
+            <a href="#">Política de cookies</a> •
+            <a href="#">Livro de Reclamações Online</a> •
+            <a href="#">Configurar cookies</a> •
+            <a href="#">Mapa do Site</a>
+        </div>
+        <div class="footer-info">
+            <span><i class="fas fa-globe"></i> Portugal | Português</span>
+            <span>© 2025 ESSÊNCIA FEMININA</span>
+        </div>
+    </footer>
+
+    <script src="telaprincipal.js"></script>
+</body>
+</html>

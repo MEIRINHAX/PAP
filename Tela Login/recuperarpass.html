@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recuperação de Senha</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: #ffffff;
+      padding: 20px 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .container h1 {
+      color: #333333;
+      margin-bottom: 20px;
+    }
+
+    .container p {
+      color: #666666;
+      margin-bottom: 20px;
+    }
+
+    .container input[type="email"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    .container button {
+        background-color: #3b271e;
+        padding: 12px 22px;
+        font-size: 13px;
+        color: white;
+        border-radius: 50px;
+        border: none;
+        cursor: pointer;
+        transition: box-shadow 0.3s ease, transform 0.3s ease;
+        color: white;
+    }
+
+    .container button:hover {
+      background-color: #3b271ecc;
+    }
+
+    .container a {
+      display: block;
+      margin-top: 15px;
+      color: #007BFF;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .container a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Não te lembras da tua palavra-passe?</h1>
+    <p>Iremos enviar as instruções para o teu e-mail para que a possas redefinir</p>
+    <form>
+      <input type="email" placeholder="E-mail" required>
+      <button type="submit">Enviar</button>
+    </form>
+    <a type="submit" href="login-registrar.html">Voltar para o login</a>
+  </div>
+</body>
+</html>

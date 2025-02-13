@@ -1,0 +1,128 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navegação */
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-bar .menu a {
+    margin: 0 15px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}
+
+.nav-bar .menu a:hover {
+    color: #e91e63;
+}
+
+.nav-bar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #e91e63;
+}
+
+/* Banner */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.banner-text h1 {
+    font-size: 2.5rem;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.banner-text button {
+    padding: 10px 20px;
+    background: #e91e63;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.banner-text button:hover {
+    background: #d81b60;
+}
+
+/* Categorias */
+.categorias {
+    padding: 20px;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.categorias h2 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
+.card h3 {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    font-size: 1.2rem;
+}

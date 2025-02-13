@@ -1,0 +1,356 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1f1f20;
+    color: #333;
+}
+
+/* Header e Navegação */
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    color: #000;
+    font-weight: bold;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #ff6f00;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    background: #f5f5f5;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.search input {
+    border: none;
+    background: transparent;
+    padding: 5px;
+    font-size: 14px;
+}
+
+/* Estilos para os botões de CTA */
+.cta-button {
+    display: flex;
+    gap: 15px;
+}
+
+.cta-button a {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espaço entre o ícone e o texto */
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.iniciarsessao {
+    background: #686c78;
+    color: white;
+}
+
+.cesto {
+    background: #f5f5f5;
+    color: #000;
+}
+
+/* Efeito hover */
+.iniciarsessao:hover {
+    background: #422819;
+}
+
+.cesto:hover {
+    background: #e0e0e0;
+}
+
+/* Estilos para os ícones */
+.cta-button i {
+    font-size: 16px; /* Tamanho do ícone */
+}
+
+/* Estilos para a aba do cesto */
+.cesto-sidebar {
+    position: fixed;
+    top: 0;
+    right: -400px; /* Esconde a aba inicialmente */
+    width: 400px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease;
+    z-index: 1000;
+}
+
+.cesto-sidebar.open {
+    right: 0; /* Mostra a aba */
+}
+
+.cesto-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.cesto-header h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.cesto-header button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.cesto-content {
+    padding: 20px;
+}
+
+.cesto-content p {
+    font-size: 16px;
+    color: #666;
+}
+
+.favoritos-link {
+    display: block;
+    margin-top: 20px;
+    color: #e91e63;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cesto-footer {
+    padding: 20px;
+    border-top: 1px solid #ddd;
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    gap: 30px;
+}
+
+.footer-section {
+    flex: 1;
+}
+
+.footer-section.about .logo-text {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Maior espaçamento entre os links */
+    padding: 20px 0; /* Mais espaço acima e abaixo */
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.2s ease;
+    position: relative;
+}
+
+.footer-links a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background: #ff6f00;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ff6f00;
+    transform: translateY(-2px);
+}
+
+.footer-links a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Ajustando a posição do bloco inferior */
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0; /* Mais espaçamento para separar do resto */
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+}
+
+.footer-info span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #bbb;
+    margin-top: 5px;
+}
+
+/* Posicionando "Portugal | Português" depois do nome da empresa */
+.footer-info .footer-location {
+    order: 2; /* Move "Portugal | Português" para depois */
+}
+
+.footer-info .footer-name {
+    order: 1; /* Mantém o nome da empresa primeiro */
+    font-weight: bold;
+}
+
+.footer-info .footer-year {
+    order: 3; /* Mantém o ano no meio */
+}
+
+.footer-info i {
+    font-size: 14px;
+    color: #ff6f00;
+}
+
+
+.contact span {
+    display: block;
+    margin: 10px 0;
+}
+
+.socials {
+    margin-top: 15px;
+}
+
+.socials a {
+    color: #fff;
+    margin-right: 15px;
+    transition: color 0.3s;
+}
+
+.socials a:hover {
+    color: #351903;
+}
+
+.links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.links li {
+    margin: 10px 0;
+}
+
+.links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.links a:hover {
+    color: #351903;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #444;
+    color: #fff;
+}
+
+.contact-btn {
+    background-color: #686c78;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact-btn:hover {
+    background-color: #422819;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .nav-bar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .banner-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login e Registrar</title>
+    <link rel="stylesheet" href="login-registrar.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container" id="container">
+      <!-- Formulário de Registro -->
+      <div class="form-container register-container">
+        <form action="/registar" method="POST">
+            <h1>Criar Conta</h1>
+            <div class="form-control">
+              <input type="text" name="username" placeholder="Nome" required />
+            </div>
+            <div class="form-control">
+              <input type="email" name="email" placeholder="E-mail" required />
+            </div>
+            <div class="form-control">
+              <input type="password" name="password" placeholder="Palavra-passe" required />
+            </div>
+            <button type="submit">Criar Conta</button>
+            <div class="content">
+              <div class="radiobutton">
+                <input type="radio" name="radiobutton" id="checkbox" />
+                <label for="">Manter sessão</label>
+              </div>
+            </div>
+          </div>
+        </form>
+      <!-- Formulário de Login -->
+      <div class="form-container login-container">
+        <form action="/login" method="POST">
+          <h1>Iniciar Sessão</h1>
+          <div class="form-control">
+            <input type="email" name="email" placeholder="E-mail" required />
+          </div>
+          <div class="form-control">
+            <input type="password" name="password" placeholder="Palavra-passe" required />
+          </div>
+          <button type="submit">Iniciar Sessão</button>
+        </form>
+        
+
+          <div class="content">
+            <div class="radiobutton">
+              <input type="radio" name="radiobutton" id="checkbox" />
+              <label for="">Manter sessão</label>
+            </div>
+            <div class="pass-link">
+              <a href="recuperarpass.html">Não te lembras da tua palavra-passe?</a>
+            </div>
+          </div>
+          <button type="submit" class="btn-login">Iniciar sessão</button>
+        </form>
+      </div>
+
+      <!-- Overlay -->
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-left">
+            <h1 class="title">
+              Olá, seja bem-vindo(a)
+            </h1>
+            <p>Inicia já sessão com a tua conta no nosso site!</p>
+            <button class="ghost" id="login">
+              Iniciar sessão
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+          </div>
+
+          <div class="overlay-panel overlay-right">
+            <h1 class="title">
+                Começa o teu
+                viajar agora
+            </h1>
+            <p>
+                Se ainda não tens uma conta, junta-te a nós e comece a tua jornada!
+            </p>
+            <button class="ghost" id="register">
+              Registar
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="login-registrar.js"></script>
+</html>
