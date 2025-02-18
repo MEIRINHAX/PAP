@@ -271,6 +271,55 @@ body {
     text-align: center;
 }
 
+/* Botões de abas */
+.tabs {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .tab {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #351903; /* Castanho */
+    padding: 5px 10px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.tab i {
+    margin-right: 5px;
+    color: #ff6f00; /* Ícone em laranja */
+}
+
+.tab:hover {
+    color: #ff6f00;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+}
+
+  /* Aba ativa (podes pôr um fundo diferente, sublinhado, etc.) */
+.active-tab {
+    color: #fff;
+    background-color: #351903;
+    border-radius: 5px;
+}
+
+  /* Conteúdo das tabs */
+.tab-content {
+    display: none; /* Escondido por padrão; vamos mostrar via JS */
+    text-align: center;
+    padding: 20px;
+    flex: 1; /* Para ocupar o espaço vertical */
+}
+
+  /* Mostramos só a tab ativa */
+.tab-content.active {
+    display: block;
+}
+
 .descobrir-btn {
     padding: 10px 20px;
     background-color: #351903;

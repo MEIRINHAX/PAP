@@ -11,33 +11,49 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// Função para abrir o carrinho de compras
-const cartIcon = document.querySelector('.cesto');
-cartIcon.addEventListener('click', () => {
-    // alert('Abrir o Cesto de Compras');
-});
+// Selecionar os botões das abas
+const tabCestoBtn = document.getElementById('tabCestoBtn');
+const tabFavoritosBtn = document.getElementById('tabFavoritosBtn');
 
-// Ação no botão do banner
-function explorar() {
-    alert("Explore o site agora!");
-    // Redirecione para uma seção
-    window.location.href = "#categorias";
+// Selecionar as divs de conteúdo
+const cestoContent = document.getElementById('cestoContent');
+const favoritosContent = document.getElementById('favoritosContent');
+
+// Função para mostrar a aba do cesto
+function mostrarCesto() {
+  // Botões
+tabCestoBtn.classList.add('active-tab');
+tabFavoritosBtn.classList.remove('active-tab');
+  // Conteúdo
+cestoContent.classList.add('active');
+favoritosContent.classList.remove('active');
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-    const cestoBtn = document.getElementById("cestoBtn");
-    const cestoSidebar = document.getElementById("cestoSidebar");
-    const closeCesto = document.getElementById("closeCesto");
+// Função para mostrar a aba dos favoritos
+function mostrarFavoritos() {
+tabCestoBtn.classList.remove('active-tab');
+tabFavoritosBtn.classList.add('active-tab');
+cestoContent.classList.remove('active');
+favoritosContent.classList.add('active');
+}
 
-    // Função para abrir o cesto
-    cestoBtn.addEventListener("click", function (event) {
-        event.preventDefault(); // Evita recarregar a página ao clicar no link
-        cestoSidebar.style.right = "0"; // Move a sidebar para dentro da tela
-    });
+// Ao clicar nos botões, alternar
+tabCestoBtn.addEventListener('click', mostrarCesto);
+tabFavoritosBtn.addEventListener('click', mostrarFavoritos);
 
-    // Função para fechar o cesto
-    closeCesto.addEventListener("click", function () {
-        cestoSidebar.style.right = "-100%"; // Move a sidebar para fora da tela
-    });
+// Quando a sidebar abre pela primeira vez, assumimos que queremos mostrar o cesto (ou favoritos, tu decides)
+mostrarCesto(); // ou mostrarFavoritos();
+
+// Abrir e fechar a sidebar do cesto
+const cestoBtn = document.getElementById('cestoBtn');
+const cestoSidebar = document.getElementById('cestoSidebar');
+const closeCestoBtn = document.getElementById('closeCesto');
+
+cestoBtn.addEventListener('click', function(e) {
+e.preventDefault();
+  cestoSidebar.classList.add('open');  // Mostra a sidebar
 });
 
+closeCestoBtn.addEventListener('click', function() {
+  cestoSidebar.classList.remove('open'); // Fecha a sidebar
+});

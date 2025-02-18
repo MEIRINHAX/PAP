@@ -38,28 +38,42 @@
     </header>
 
     <div class="cesto-sidebar" id="cestoSidebar">
+        <!-- Cabeçalho com botões de abas (Cesto e Favoritos) -->
         <div class="cesto-header">
-        <h2>Cesto</h2>
-        <!-- Secção de Favoritos (ícone de coração + texto) -->
-        <a href="principalfavoritos.html" class="favoritos-link topo-favoritos">
-            <i class="fas fa-heart"></i> Favoritos
-        </a>
-        <!-- Botão para fechar -->
-        <button id="closeCesto">&times;</button>
+          <div class="tabs">
+            <button class="tab active-tab" id="tabCestoBtn">
+              <i class="fas fa-shopping-basket"></i> Cesto
+            </button>
+            <button class="tab" id="tabFavoritosBtn">
+              <i class="fas fa-heart"></i> Favoritos
+            </button>
+          </div>
+          <!-- Botão para fechar a lateral -->
+          <button id="closeCesto">&times;</button>
         </div>
-        <div class="cesto-content">
-        <!-- Ilustração do cesto vazio -->
-        <div class="cesto-empty-image">
-            <!-- Substituir o src pela localização da tua imagem -->
+      
+        <!-- CONTEÚDO DO CESTO -->
+        <div class="tab-content" id="cestoContent">
+          <div class="cesto-empty-image">
             <img src="../Imagens/cesto.png" alt="Cesto vazio">
         </div>
-        <!-- Título "Cesto vazio" -->
         <h3 class="cesto-empty-title">Cesto vazio</h3>
-        <!-- Mensagem -->
         <p>O teu cesto está vazio. Descobre tudo o que temos para ti.</p>
-        </div>
         <div class="cesto-footer">
-        <button class="descobrir-btn">DESCOBRIR</button>
+            <button class="descobrir-btn">DESCOBRIR</button>
+        </div>
+        </div>
+        <!-- CONTEÚDO DOS FAVORITOS -->
+        <div class="tab-content" id="favoritosContent">
+        <div class="cesto-empty-image">
+            <!-- Podes pôr outra imagem de “Favoritos vazio” ou usar a mesma -->
+            <img src="../Imagens/favoritos.png" alt="Favoritos vazios">
+        </div>
+        <h3 class="cesto-empty-title">Favoritos vazios</h3>
+        <p>Não tens nenhum item nos favoritos. Explora e adiciona o que mais gostas!</p>
+        <div class="cesto-footer">
+            <button class="descobrir-btn">VER PRODUTOS</button>
+        </div>
         </div>
     </div>
 
